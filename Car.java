@@ -85,6 +85,34 @@ public class Car {
                 System.out.println("car" + ": " + array[i]);
             }
         }
+        
+         // b) список автомобилей заданной модели, которые эксплуатируются больше n лет;
+    public static void carsByModelAndYear(Car[] array){
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введіть марку авто: ");
+        String m = in.nextLine();
+        //вивести авто марки m, які експлуатуються більше 1 року
+        for(int i = 0; i < 3; i++){
+            if(array[i].mark == m && array[i].year < 2019){
+                System.out.println(array[i].getId() + array[i].getMark() + array[i].getModel() + array[i].getReg_numb());
+            }
+        }
+
+    }
+
+    // c) список автомобилей заданного года выпуска, цена которых больше указанной
+    public static void carsByYearAndPrice(Car[] array){
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введіть рік випуску авто: ");
+        int y = in.nextInt();
+        
+        for(int i = 0; i < 3; i++){
+            if(array[i].year == y && array[i].price > 200000){
+                System.out.println(array[i].getId() + array[i].getMark() + array[i].getModel() + array[i].getReg_numb());
+            }
+        }
 
     }
 
